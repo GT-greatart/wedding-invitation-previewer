@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invitation Form</title>
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+
+</head>
+
+<body style="margin: 0px;">
+    <div>
+        <header class="header2">
+            <div class="title-header">
+                <img src="assets/img/hearts.svg" alt="heart" class="heart" />
+                <span class="titleHeader glow"> Invitation Form Design</span><img src="assets/img/hearts.svg" alt="heart" class="heart" />
+            </div>
+            <!-- NAVBAR NAVIGATION on the SITE -->
+            <nav class="navbar">
+                <a href="./index.html" data-scroll="true" data-id="#main">Sweet wedding</a>
+                <a href="./form.html" data-scroll="true" class="active" data-id="form">Invitation form</a>
+            </nav>
+            <!-- NAVBAR END -->
+        </header>
+
+        <main>
+            <div class="content">
+                <div class="row">
+                    <div class="col-6 ">
+                        <form class="container-form">
+                            <table style="width:100%;color: maroon;">
+                                <tr>
+                                    <th style="width:25%"> STYLES:</th>
+                                    <th style="width:25%">
+                                        <div onclick="style1()">Classic</div>
+                                    </th>
+                                    <th style="width:25%">
+                                        <div onclick="style2()">Golden</div>
+                                    </th>
+                                    <th style="width:25%">
+                                        <div onclick="style3()">Pastel</div>
+                                    </th>
+                                </tr>
+                            </table>
+                            <div class="col-6" style="padding-left: 0px;padding-right: 3px;">
+                                <label for="invitee1"><b>First Invitee:</b></label>
+                                <input type="text" placeholder="Enter name" class="invitee1" id="invitee1" name="invitee1" required></div>
+
+                            <div class="col-6" style="padding-left: 3px;padding-right: 0px;">
+                                <label for="invitee2"><b>Second Invitee:</b></label>
+                                <input type="text" placeholder="Enter name" class="invitee2" id="invitee2" name="invitee2"></div>
+
+                            <label for="herName"><b>Bride's Name:</b></label>
+                            <input type="text" placeholder="Enter bride's name" class="herName" id="herName" name="herName" required>
+
+
+                            <label for="hisName"><b>Groom's Name:</b></label>
+                            <input type="text" placeholder="Enter groom's name" class="hisName" id="hisName" name="hisName">
+
+                            <label for="lastName"><b>Surname:</b></label>
+                            <input type="text" placeholder="Enter your surname" class="lastName" id="lastName" name="lastName">
+
+                            <label for="date"><b>Date:</b></label>
+                            <!-- <input type="text" placeholder="Enter date" class="date" id="date" name="date" required> -->
+                            <input type="date" onchange="displayDate()" class="date" id="date" name="date" required>
+
+                            <label for="location"><b>Wedding Location:</b></label>
+                            <!-- <textarea placeholder="Enter address" class="location" id="location" name="location" rows="2" cols="30" required></textarea> -->
+                            <input type="text" placeholder="Enter Venue name" class="location" id="location" name="location">
+                            <input type="text" placeholder="Enter Venue Address" class="location" id="location1" name="location1">
+
+
+                        </form>
+
+                    </div>
+                    <div class="col-6  ">
+                        <div id="superStyle" class="style1">
+
+                            <h2 id="h2" style="color: rgb(99, 47, 4);">Wedding Invitation</h2>
+                            <hr id="hr">
+                            <div class="invName"><span>Dear</span>&nbsp;<span id="invitee1Result" class="upp invitee1Result"></span>&nbsp;<span>&</span>&nbsp;<span id="invitee2Result" class="upp invitee1Result"></span><span> ,</span></div>
+                            <p style="font-size: 22px;">You are cordially invited to the wedding of</p>
+                            <p class="upp wedNames">
+                                <span id="herNameResult" class="herNameResult"></span> &nbsp;
+                                <span>&</span>&nbsp;
+                                <span id="hisNameResult" class="hisNameResult"></span></p>
+                            <p id="lastNameResult" class="upp wedSurname lastNameResult"></p>
+                            <p id="dateResult" style="font-size: 25px;" class="dateResult cap "></p>
+                            <p id="locationResult" style="font-size: 22px;" class="cap locationResult"></p>
+                            <p id="locationResult1" style="font-size: 22px;" class="cap locationResult1"></p>
+                            <p class="upp wedNames2" id="fletter">
+                                <span id="herNameResult1" class="WedNamesResult"></span>
+                                <!-- &nbsp; -->
+                                <span>&</span>
+                                <!-- &nbsp; -->
+                                <span id="hisNameResult1" class="WedNamesResult"></span></p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="foot ">
+            <span class="footText">&copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> - </span><span class="footText">Galina's Art Studio</span>
+            <p class="pf "><a href="mailto:galina@artstudio.com">galina@artstudio.com</a></p>
+        </footer>
+    </div>
+
+    <!-- <script>
+        function style1() {
+            document.getElementById('superStyle').className = "style1";
+            document.getElementById('hr').style.color = "#2e292c";
+            document.getElementById('h2').style.color = "#880000";
+        }
+
+        function style2() {
+            document.getElementById('superStyle').className = "style2";
+            document.getElementById('hr').style.color = "darkred";
+            document.getElementById('h2').style.color = "maroon";
+        }
+
+        function style3() {
+            document.getElementById('superStyle').className = "style3";  
+            document.getElementById('hr').style.color = "#248f8f";        
+            document.getElementById('h2').style.color = "#248f8f";                    
+        }
+    </script>
+    <script>
+        let inputInvitee1 = document.getElementById('invitee1');
+
+        inputInvitee1.onkeyup = function() {
+            document.getElementById('invitee1Result').innerHTML = inputInvitee1.value;
+        }
+    </script>
+    <script>
+        let inputInvitee2 = document.getElementById('invitee2');
+
+        inputInvitee2.onkeyup = function() {
+            document.getElementById('invitee2Result').innerHTML = inputInvitee2.value;
+        }
+    </script>
+    <script>
+        let inputHer = document.getElementById('herName');
+
+        inputHer.onkeyup = function() {
+            document.getElementById('herNameResult').innerHTML = inputHer.value;
+        let inputHer1 = inputHer.value.charAt(0);
+            document.getElementById('herNameResult1').innerHTML = inputHer1;
+        }
+    </script>
+    <script>
+        let inputHim = document.getElementById('hisName');
+
+        inputHim.onkeyup = function() {
+            document.getElementById('hisNameResult').innerHTML = inputHim.value;
+        let inputHim1 = inputHim.value.charAt(0);
+            document.getElementById('hisNameResult1').innerHTML = inputHim1;
+        }
+    </script>
+    <script>
+        let inputSurname = document.getElementById('lastName');
+
+        inputSurname.onkeyup = function() {
+            document.getElementById('lastNameResult').innerHTML = inputSurname.value;
+        }
+    </script>
+    <script>
+        // var inputDate = document.getElementById('date');
+
+        // inputDate.onkeyup = function() {
+        //     document.getElementById('dateResult').innerHTML = inputDate.value;
+        // }
+        function displayDate() {
+
+        let date1 = document.getElementById("date").value;
+
+        const d = new Date(date1);
+        const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);    
+        const mo = new Intl.DateTimeFormat('en', { month: 'long' }).format(d);
+        const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);        
+        let newDate = `${da} ${mo} ${ye}`;       
+        document.getElementById('dateResult').innerHTML = newDate;
+        }
+
+    </script>
+    <script>
+        let inputLocation = document.getElementById('location');
+        
+        inputLocation.onkeyup = function() {
+            document.getElementById('locationResult').innerHTML = inputLocation.value;
+        }
+    </script>
+
+    <script>
+        let inputLocation1 = document.getElementById('location1');
+
+        inputLocation1.onkeyup = function() {
+            document.getElementById('locationResult1').innerHTML = inputLocation1.value;
+        }
+    </script>
+     -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+
+</html>
